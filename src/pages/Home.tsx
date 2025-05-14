@@ -8,9 +8,6 @@ import SearchBox from "../Components/SearchBox";
 
 const Weather =() => {
 
-    const addWeather = () => {
-        console.log("Add weather button clicked");
-    }
 
     return (
         <>
@@ -19,9 +16,9 @@ const Weather =() => {
                         <h1 className="league-spartan text-6xl font-medium font-sans">Stay prepared with real-time</h1>
                         <h2 className="league-spartan text-4xl font-normal mb-16 font-sans">weather updates</h2>
                         <p className="karla text-2xl font-light font-sans">Find and check the weather around you easily</p>
-                        <div className="p-10">
-                            <Button className="mr-7"> Search Weather </Button>
-                            <Button onClick={addWeather}> Add Weather </Button>
+                        <div className=" flex justify-center gap-2 ">
+                            <Button className=" bg-gray-200 rounded-xl p-3"> Search Weather </Button>
+                            <Button className=" bg-gray-200 rounded-xl p-3"> Add Weather </Button>
                         </div>
                     </div>
                  

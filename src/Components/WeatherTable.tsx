@@ -117,7 +117,7 @@ const WeatherTable: React.FC = () => {
                                         <td className="karla px-4 py-2 text-2xl">{weather.name}</td>
                                         <td className="karla px-4 py-2 text-2xl"><img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="icon" /></td>
                                         <td className="karla px-4 py-2 text-2xl">{weather.weather[0].description}</td>
-                                        <td className="karla px-4 py-2 text-2xl"><Button className="bg-gray-100 px-4 py-2 rounded-md" onClick={() => addWeather(weather)}>Add</Button></td>
+                                        <td className="karla px-4 py-2 text-2xl"><Button className="bg-gray-100 px-4 py-2 rounded-md duration-200 will-change-transform hover:bg-blue-200 hover:scale-[1.03]   " onClick={() => addWeather(weather)}>Add</Button></td>
                                     </tr>
                                 )
                             )}
@@ -125,15 +125,15 @@ const WeatherTable: React.FC = () => {
                         </table>
                         </div>
                     </div>
-                    <div className="flex flex-wrap gap-10 mx-80 my-12">
+                    <div className="flex flex-wrap gap-10 justify-center my-12 max-w-full mx-5 ">
                         {selectWeather.map(items => (
-                            <Box className=" bg-white border-2 max-w-[100%] h-auto rounded-xl p-10 shadow-lg transition-transform hover:scale-[1.03]">
+                            <Box className=" bg-white border-2 border-gray-200 w-full h-auto sm:w-[60%] md:w-[45%] lg:w-[30%]  rounded-xl p-8 shadow-lg transition-transform hover:scale-[1.03]">
                                 <div key={items.id}>
-                                    <p>{items.name}</p>
-                                    <p>{date}</p>
+                                    <p className="league-spartan text-3xl md:text-4xl lg:text-5xl">{items.name}</p>
+                                    <p className="karla text-xl md:text-3xl font-light">{date}</p>
                                     <div><img src={`https://openweathermap.org/img/wn/${items.weather[0].icon}@2x.png`}/></div>
-                                    <p>{items.weather[0].description}</p>
-                                    <p className="w-80">{getQuoteForWeather(items.weather[0].description)}</p>
+                                    <p className="karla text-2xl mb-5 md:text-3xl font-normal">{items.weather[0].description}</p>
+                                    <p className="karla w-80 text-xl md:text-2x1 font-light">{getQuoteForWeather(items.weather[0].description)}</p>
                                 </div>
                             </Box>
                         ))}
