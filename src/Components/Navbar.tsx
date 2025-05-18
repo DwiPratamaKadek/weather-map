@@ -1,6 +1,5 @@
 import Menu from "../Elements/Menu";
-import InputText  from "../Elements/InputText";
-import { FiSearch,FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
 
 
@@ -26,10 +25,6 @@ const Navbar = () => {
             <div className="hidden md:flex league-spartan gap-12 text-lg">
                 <Menu className="league-spartan flex gap-12 text-lg"  items ={menuItems}/> 
             </div>  
-            <div className="hidden md:flex items-center gap-4 bg-gray-200 pt-1 pb-1 pl-3 rounded-sm ">
-                <FiSearch></FiSearch>
-                <InputText className="league-spartan text-lg rounded-sm focus:outline-none foucs:border-transparant" placeholder="Find Your Location" ></InputText>
-            </div>
 
             {/* Hamburger Menu */}
             <div className="md:hidden">
@@ -42,13 +37,9 @@ const Navbar = () => {
             ${isOpen?'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-auto'}`}
             >
                 <Menu className="flex flex-col gap-4 league-spartan text-lg" items={menuItems}/>
-                <div className="flex items-center gap-3 bg-gray-200 px-3 py-1 rounded-sm ">
-                    <FiSearch></FiSearch>
-                    <InputText className="league-spartan text-lg bg-transparent focus:outline-none w-full" placeholder="Find your location"></InputText>
-                </div>
             </div>
         
         </nav>
     )
 }
-export default Navbar
+export default Navbar   
